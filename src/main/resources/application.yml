@@ -3,8 +3,9 @@ server:
 eureka:
   instance:
     hostname: xxl-eureka  # eureka实例的主机名
+    prefer-ip-address: true
   client:
     register-with-eureka: false #不把自己注册到eureka上
-    fetch-registry: false #不从eureka上来获取服务的注册信息
+    fetch-registry: true #不从eureka上来获取服务的注册信息
     service-url:
       defaultZone: http://47.92.205.190:880/eureka
